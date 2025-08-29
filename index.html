@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Holográfica de Grado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animación de flujo de datos */
+        @keyframes holographic-glow {
+            0%, 100% {
+                box-shadow: 0 0 15px #00e6ff, 0 0 30px #00e6ff;
+            }
+            50% {
+                box-shadow: 0 0 15px #ff00e6, 0 0 30px #ff00e6;
+            }
+        }
+        
+        /* Animación para el fondo de la página */
+        @keyframes data-stream {
+            from { background-position: 0 0; }
+            to { background-position: -200% -200%; }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c001c;
+            color: #e0f7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            
+            /* Creando un fondo con líneas y puntos */
+            background-image:
+                linear-gradient(rgba(0, 230, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 230, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(rgba(255, 0, 230, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 230, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+            animation: data-stream 20s linear infinite;
+        }
+
+        .invitation-card {
+            background-color: rgba(26, 3, 45, 0.8);
+            backdrop-filter: blur(8px);
+            max-width: 600px;
+            width: 100%;
+            border-radius: 1.5rem;
+            border: 2px solid #00e6ff;
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: holographic-glow 5s ease-in-out infinite;
+        }
+
+        .invitation-card:hover {
+            transform: scale(1.02);
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 230, 255, 0.8);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #00e6ff;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #ff00e6;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+            color: #b0e0e6;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            border-top: 1px dashed #ff00e6;
+            border-bottom: 1px dashed #00e6ff;
+            padding: 1.5rem 0;
+        }
+        .details-list li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #00e6ff, #ff00e6);
+            color: #0c001c;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 0 10px #00e6ff;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff00e6;
+        }
+        .icon {
+            font-size: 1.5rem;
+            color: #ff00e6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <h1 class="text-4xl sm:text-5xl">INVITACIÓN CENA GRADO</h1>
+        <p class="text-lg">
+            <code>> Iniciando_simulación_de_celebración...</code><br>
+            Acompáñenme para una cena especial para conmemorar mi graduación.
+        </p>
+        <p class="text-2xl font-bold text-white">
+            Willmer Alejandro Salazar Ospina
+        </p>
+        <p class="text-lg font-light text-gray-300">
+            Ingeniero de Sistemas
+        </p>
+        <div class="bg-gray-900 bg-opacity-70 p-6 rounded-xl border-2 border-gray-700 shadow-inner">
+            <h2 class="text-2xl mb-4">MÓDULO DE INFORMACIÓN</h2>
+            <ul class="details-list">
+                <li>
+                    <span class="icon">&#128197;</span>
+                    <p><strong>Fecha:</strong> Miercoles, 24 de Septiembre de 2025</p>
+                </li>
+                <li>
+                    <span class="icon">&#128336;</span>
+                    <p><strong>Hora:</strong> 7:00 p.m.</p>
+                </li>
+                <li>
+                    <span class="icon">&#127978;</span>
+                    <p><strong>Lugar:</strong> Restaurante "Gente Común"</p>
+                </li>
+                <li>
+                    <span class="icon">&#128205;</span>
+                    <p><strong>Dirección:</strong> Calle 3# 4-52 B/San Antonio</p>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col gap-4">
+            <p>
+                <code>> Se requiere confirmación de asistencia para una logística óptima.</code>
+            </p>
+            <a href="https://forms.gle/xxxxxxxxxxxxxxxxxxxxx" target="_blank" class="button">
+                CONFIRMAR ASISTENCIA
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Script para desplazamiento suave hacia arriba y abajo
+        let isScrolling = false;
+        document.body.addEventListener('wheel', (e) => {
+            if (isScrolling) return;
+
+            isScrolling = true;
+            if (e.deltaY > 0) {
+                window.scrollBy({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            } else {
+                window.scrollBy({
+                    top: -window.innerHeight,
+                    behavior: 'smooth'
+                });
+            }
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+        });
+        
+        // Manejar el clic en el botón
+        const confirmationLink = document.querySelector('.button');
+        confirmationLink.addEventListener('click', () => {
+             console.log('Redirigiendo a formulario de Google...');
+        });
+    </script>
+</body>
+</html>
